@@ -37,7 +37,19 @@ class CircleShip extends Circle implements Ship{
         }
     }
     public void shootEvent(){
-        level1.addBullets(new BulletCircle(this.x, this.y, 0, 100, 5, 10, 1, Faction.ENEMY));
+        float targetX = this.x - player.getX();
+        float targetY = this.y - player.getY();
+        Vector targetVector = new Vector(targetX, targetY);
+        Vector unitTarget = targetVector.unit();
+        level1.addBullets(new BulletCircle(
+            this.x, 
+            this.y, 
+            (Shape.maxBulletSpeed * -unitTarget.getX()), 
+            (Shape.maxBulletSpeed * -unitTarget.getY()), 
+            5, 
+            10, 
+            1, 
+            Faction.ENEMY));
     }
     
     public void setColor(){

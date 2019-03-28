@@ -12,8 +12,6 @@ class Level {
         gameObjects.add(new CircleShip(5, 10, random(5,75), 10, Faction.ENEMY));
         gameObjects.add(new CircleShip(5, 50, random(5,75), 10, Faction.ENEMY));
         gameObjects.add(new CircleShip(5, 100, random(5,75), 10, Faction.ENEMY));
-        //this.gameObjects = gameObjects;
-        //this.gameBullets = gameBullets;
     }
     public void update(){
         //Updates everything, and runs collision checks 

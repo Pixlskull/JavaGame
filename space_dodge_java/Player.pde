@@ -2,14 +2,11 @@ class Player extends CircleShip implements Ship{
     private float xSpeedTop;
     private float ySpeedTop;
     private Faction faction;
-    private float maxBulletSpeed;
     Player(float size, float hp) {
         super(width/2, height/2, size, hp, Faction.PLAYER);
         this.xSpeedTop = 150;
         this.ySpeedTop = 150;
         this.faction = Faction.PLAYER;
-        //Not the best way to do this;
-        this.maxBulletSpeed = 100;
     }
     @Override
     public void update(){
@@ -25,7 +22,7 @@ class Player extends CircleShip implements Ship{
         super.draw();
     }
     public void shootEvent(){
-        level1.addBullets(new BulletCircle(player.x, player.y, (maxBulletSpeed * controller.xTargetMult), (maxBulletSpeed * controller.yTargetMult), 5, 10, 1, Faction.PLAYER));
+        level1.addBullets(new BulletCircle(player.x, player.y, (Shape.maxBulletSpeed * controller.xTargetMult), (Shape.maxBulletSpeed * controller.yTargetMult), 5, 10, 1, Faction.PLAYER));
         
     }
     public Faction getFaction(){

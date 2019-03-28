@@ -4,13 +4,13 @@ abstract class Shape {
     protected float xSpeed;
     protected float ySpeed;
     protected color col;
-    protected float xSize;
+    protected float xSize; //<>//
     protected float ySize;
     protected float draw_x;
     protected float draw_y;
     protected Faction faction;
+    public static final float maxBulletSpeed = 100;
     
-
     Shape(float x, float y, float xSpeed, float ySpeed, float xSize, float ySize) {
         /*
          * Create a new shape at the given
@@ -19,7 +19,7 @@ abstract class Shape {
          */
         this.x = x;
         this.y = y;
-        this.xSpeed = xSpeed;
+        this.xSpeed = xSpeed; //<>//
         this.ySpeed = ySpeed;
         this.xSize = xSize;
         this.ySize = ySize;

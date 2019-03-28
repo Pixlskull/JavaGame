@@ -1,6 +1,5 @@
 import java.util.*;
 import javafx.util.*;
-import java.io.*;
 
 float lastMillis;
 float millis;
